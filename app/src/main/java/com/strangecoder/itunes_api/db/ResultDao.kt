@@ -12,7 +12,7 @@ interface ResultDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(resultItems: List<RoomDbItem>)
 
-    @Query("SELECT * FROM resultItems WHERE trackName LIKE :searchTerm OR artistName LIKE :searchTerm")
+    @Query("SELECT * FROM resultItems WHERE trackName LIKE '%'||:searchTerm||'%' OR artistName LIKE '%'||:searchTerm||'%'")
     fun getLocalResults(searchTerm: String): List<RoomDbItem>
 
     @Query("SELECT * FROM resultItems")

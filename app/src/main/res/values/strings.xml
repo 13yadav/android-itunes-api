@@ -4,4 +4,5 @@
     <string name="search">Search</string>
     <string name="network_available">Network Available\nSearch for song or artist</string>
     <string name="no_network">No Network\nSearch for song or artist from local storage</string>
+    <string name="no_results">No Results available...</string>
 </resources>

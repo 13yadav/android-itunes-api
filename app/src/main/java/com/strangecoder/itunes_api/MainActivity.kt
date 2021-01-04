@@ -39,9 +39,16 @@ class MainActivity : AppCompatActivity() {
         binding.searchResultList.adapter = searchListAdapter
 
         viewModel.searchResults.observe(this, {
-            it?.let {
+            if (it.isNotEmpty()) {
                 binding.networkText.visibility = View.GONE
+                binding.searchResultList.visibility = View.VISIBLE
                 searchListAdapter.submitList(it)
+            } else {
+                binding.networkText.apply {
+                    visibility = View.VISIBLE
+                    text = context.getString(R.string.no_results)
+                    binding.searchResultList.visibility = View.GONE
+                }
             }
         })
     }

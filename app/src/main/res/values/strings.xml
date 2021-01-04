@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Itunes Api</string>
+    <string name="search_song">Search song</string>
+    <string name="search">Search</string>
+    <string name="network_available">Network Available\nSearch for song or artist</string>
+    <string name="no_network">No Network\nSearch for song or artist from local storage</string>
+</resources>
